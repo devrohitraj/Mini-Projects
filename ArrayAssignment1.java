@@ -21,7 +21,7 @@ public class ArrayAssignment1 {
 			System.out.println("Please enter 9 integer numbers");
 		}
 		
-		
+		else{
 		/*
 		int i = 0;
 		String givenvalue = args[i];
@@ -43,7 +43,7 @@ public class ArrayAssignment1 {
 			for(int j = 0; j<3; j++){
 				numbers[i][j] = Integer.parseInt(args[k++]);
 				int m = numbers[i][j];
-				System.out.print(givenNumbers[m - 1]+"\t");
+				System.out.print(m+"\t");
 			}
 		    System.out.println(" ");
 		}
@@ -66,7 +66,7 @@ public class ArrayAssignment1 {
 		System.out.println("The biggest number in the given array is " +temp);
         
 		
-        
+		}  
 
 	}
 
