@@ -1,4 +1,4 @@
-package OOPSAssignment.Encapsulation;
+package OOPSAssignments.Encapsulation;
 
 public class Author {
 	
@@ -41,3 +41,4 @@ public class Author {
 
 
 }
+
