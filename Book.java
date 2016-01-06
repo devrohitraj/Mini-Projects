@@ -1,88 +1,56 @@
-package OOPSAssignment.Encapsulation;
-import OOPSAssignment.Encapsulation.Author;
+package OOPSAssignments.Objects;
+import OOPSAssignments.Objects.Patient;
 
-public class Book {
+public class Patients {
 	
-	private String name = "";
-	private Author author = null;
-	private double price = 0.0;
-	private int qtyInStock = 0;
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
-	}
-
-	
-
-	/**
-	 * @return the author
-	 */
-	public Author getAuthor() {
-		return author;
-	}
-
-	
-
-	/**
-	 * @return the price
-	 */
-	public double getPrice() {
-		return price;
-	}
-
-	/**
-	 * @param price the price to set
-	 */
-	public void setPrice(double price) {
-		this.price = price;
-	}
-
-	/**
-	 * @return the qtyInStock
-	 */
-	public int getQtyInStock() {
-		return qtyInStock;
-	}
-
-	/**
-	 * @param qtyInStock the qtyInStock to set
-	 */
-	public void setQtyInStock(int qtyInStock) {
-		this.qtyInStock = qtyInStock;
-	}
-
-	/**
-	 * @param name
-	 * @param author
-	 * @param price
-	 * @param qtyInStock
-	 */
-	public Book(String name, Author author, double price, int qtyInStock) {
-		super();
-		this.name = name;
-		this.author = author;
-		this.price = price;
-		this.qtyInStock = qtyInStock;
-	}
-
-	
+	static Patient[] patient = new Patient[10];
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Author me = new Author("Rohit Raj", "rohit.rohitraj.info", 'M');
+		if(args.length != 10){
+			System.out.println("Please Enter 10 inputs");
+		}
+		else{
 		
-		Book aBook = new Book("Jobs - A Legend", me, 1000.0, 5);
+		for( int i = 0; i < 10; i++){
+			
+			patient[i] = new Patient(args[i]);
+			//System.out.println(patient[i]);
+		}
 		
-		aBook.getName();
-		aBook.getPrice();
-		aBook.getQtyInStock();
+		patient[0].setHeight(62);
+		patient[0].setWeight(192);
+		patient[1].setHeight(68);
+		patient[1].setWeight(192);
+		patient[2].setHeight(77);
+		patient[2].setWeight(182);
+		patient[3].setHeight(92);
+		patient[3].setWeight(162);
+		patient[4].setHeight(79);
+		patient[4].setWeight(192);
+		patient[5].setHeight(52);
+		patient[5].setWeight(112);
+		patient[6].setHeight(50);
+		patient[6].setWeight(182);
+		patient[7].setHeight(49);
+		patient[7].setWeight(182);
+		patient[8].setHeight(42);
+		patient[8].setWeight(192);
+		patient[9].setHeight(62);
+		patient[9].setWeight(192);
 		
-		me.getAuthorname();
-		me.getEmail();
-		me.getGender();
+		for( int i = 0; i < 10; i++){
+			double bmi = patient[i].BMI(patient[i].getWeight(), patient[i].getHeight());
+			//System.out.println(patient[i].getWeight() +" "+ patient[i].getHeight());
+		 
+			if(bmi > 25.0){
+				System.out.println("Patients whose BMI is greater than 25 is : "+args[i]);
+				System.out.println("Their BMI score is : "+bmi);
+			}
+		}
+		
+	}
 
 	}
 
