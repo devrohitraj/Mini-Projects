@@ -31,6 +31,7 @@ public class Dog {
 	
 	public boolean needsToGo(){
 		
+		//Dog has 4 hr without drinking, need to go outside now
 		if(drinkTime > 4){
 			return true;
 		}
