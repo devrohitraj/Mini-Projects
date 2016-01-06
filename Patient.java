@@ -1,4 +1,4 @@
-package OOPSAssignment;
+package OOPSAssignments.Objects;
 
 public class Patient {
 	
@@ -41,7 +41,7 @@ public class Patient {
 	
 	public double BMI(double weight, double height){
 		
-		double bmi = (weight / (height * height));
+		double bmi = (weight / (height * height)) * 703;
 		return bmi;
 		
 	}
