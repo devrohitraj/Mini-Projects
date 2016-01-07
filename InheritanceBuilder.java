@@ -15,6 +15,7 @@ public class InheritanceBuilder {
 		teacher.setSalary(50000.0);
 		teacher.setSubject("Java");
 		
+		cs.setAge(23);
 		cs.setMajor("CS");
 		cs.setPercentage(92.0);
 		cs.setSchoolname("Wipro");
